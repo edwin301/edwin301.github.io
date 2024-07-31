@@ -560,13 +560,3 @@
     grid-template-columns: 1fr;
   }
 }
-@media screen and (min-width:800px) {
-   /* for full screen */
-  .hero17-row-container2{
-    height:auto !important;
-  }
-  .hero17-container91{
-    width:45% !important;
-    height:auto !important;
-  }
-}   
