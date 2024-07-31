@@ -1497,6 +1497,11 @@
 .home-text19 {
   text-align: center;
 }
+.home-text19 p{
+  text-align:left !important;
+  line-height:1.5 !important;
+}
+
 .home-text35 {
   text-align: center;
 }
