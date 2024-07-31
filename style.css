@@ -478,10 +478,8 @@
   text-transform: none;
   text-decoration: none;
 }
-@media(max-width: 991px) {
-  .thq-grid-4 {
-    grid-template-columns: 1fr 1fr 1fr;
-  }
+@media screen and (min-width:800px) {
+   /* for full screen */
   .hero17-row-container2{
     height:auto;
   }
@@ -489,6 +487,13 @@
     width:45%;
     height:auto;
   }
+}   
+
+@media(max-width: 991px) {
+  .thq-grid-4 {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  
 }
 @media(max-width: 767px) {
   .thq-section-padding {
