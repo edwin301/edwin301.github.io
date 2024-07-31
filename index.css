@@ -1540,7 +1540,7 @@
   fill: var(--dl-color-theme-neutral-dark);
   color: var(--dl-color-theme-neutral-dark);
 }
-@media screen and (min-width:800px) {
+@media only screen and (min-width:800px) {
    /* for full screen */
   .hero17-row-container2{
     height:auto !important;
