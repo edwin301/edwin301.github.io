@@ -482,6 +482,9 @@
   .thq-grid-4 {
     grid-template-columns: 1fr 1fr 1fr;
   }
+  .hero17-row-container2{
+    height:auto;
+  }
   .hero17-container91{
     width:45%;
     height:auto;
