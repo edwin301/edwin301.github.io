@@ -274,7 +274,7 @@
                         <!-- https://startbootstrap.com/solution/contact-forms-->
                         <!-- to get an API token!-->
 
-                        <form action="https://api.web3forms.com/submit" method="POST">
+                        <form id="contactForm1" action="https://api.web3forms.com/submit" method="POST">
 
                             <!-- Replace with your Access Key -->
                             <input type="hidden" name="access_key" value="9276cf02-28ed-442d-b427-e243dcc5c3c4">
@@ -309,8 +309,8 @@
 
                             
                         
-                            <!-- Honeypot Spam Protection -->
-                            <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+                            <! -- Step 1: Add this line -->
+                            <div class="h-captcha" data-captcha="true"></div>
                         
                             <!-- Custom Confirmation / Success Page -->
                             <input type="hidden" name="redirect" value="https://web3forms.com/success">
@@ -377,8 +377,22 @@
         <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
         <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
         <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
-
-        
+        <! -- Step 2: Add the Web3Forms script -->
+        <script src="https://web3forms.com/client/script.js" async defer></script>
+        <script>
+            const form = document.getElementById('contactForm1');
+            
+            form.addEventListener('submit', function(e) {
+            
+                const hCaptcha = form.querySelector('textarea[name=h-captcha-response]').value;
+            
+                if (!hCaptcha) {
+                    e.preventDefault();
+                    alert("Please fill out captcha field")
+                    return
+                }
+            });
+        </script>
         
         
     </body>
